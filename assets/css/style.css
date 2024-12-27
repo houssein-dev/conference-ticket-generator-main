@@ -1,0 +1,245 @@
+:root{
+    --mainColor: hsl(0, 0%, 100%);
+    --secondColor:  hsl(7, 71%, 60%);
+    --grdColor:hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+    --labelColor:hsl(245, 19%, 35%);
+    --vSpace:15px
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    
+}
+body{
+    background-image: url('../images/background-desktop.png');
+    font-family: 'Inconsolata';
+    color: var(--mainColor);
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body > svg{
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url('../images/background-desktop.png');
+}
+.container{
+    padding-left: var(--vSpace);
+    padding-right: var(--vSpace);
+    padding-top: 75px;
+    font-size: 20px;
+}
+@media (min-width  : 768px) {
+    .container{
+        max-width: 600px;
+    }
+}
+@media (max-width : 500px) {
+    .container{
+        max-width: 300px;
+    }
+    .content-ticket .head span > svg{
+        width: 10rem;
+    }
+    .content-ticket .head p{
+        font-size:.25rem;
+        color: var(--labelColor);
+        /* padding-left: 3rem; */
+    
+    }
+    .content-ticket .foot img{
+        height: 2.5rem !important;
+        border-radius: .5rem;
+    }
+}
+body .container svg{
+    /* position: absolute; */
+}
+
+.container .head-section h2{
+    padding: var(--vSpace);
+}
+.container .head-section h2 span{
+    color: hsl(7, 71%, 60%)  ;
+}
+
+.container .head-section p{
+    padding: var(--vSpace);
+    color: var(--labelColor);
+}
+
+
+.container .head-section p span{
+    color: hsl(7, 71%, 60%)  ;
+
+}
+section.ticket
+{
+    position: relative;
+}
+
+section.ticket > svg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+z-index: 
+-1;}
+.content-ticket{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 250px;
+    padding: 24px;
+    position: relative;
+    top: -40px;
+    
+}
+.lebel{
+    font-size: 12px;
+}
+.content-ticket .head{
+    flex-basis: 82%;
+    display: grid;
+    text-align: left;
+    align-items: center;
+}
+.content-ticket .head p{
+    font-size: 16px;
+    color: var(--labelColor);
+    padding-left: 3rem;
+
+}
+
+.content-ticket .foot{
+    flex-basis: 82%;
+    display: flex;
+}
+.content-ticket .foot img{
+    height: 4rem;
+    border-radius: .5rem;
+}
+.content-ticket .foot div{
+    display: grid;
+    align-items: center;
+}
+.content-ticket .foot div p{
+    font-size: 16px;
+    color: var(--labelColor);
+
+}
+.content-ticket .foot div span{
+}
+.content-ticket .foot div p svg{
+    position: relative;
+    top: 5px;
+    left: 12px;
+    margin-right: 12px;
+}
+.content-ticket .right {
+position: absolute;
+right: 0;
+top: 50%;
+transform: translate(-50%,-50%);
+transform-origin: top;
+transform: rotate(90deg);
+color: var(--labelColor);
+
+}
+section.ticket > svg
+{
+    width: 100%;
+}
+@media (max-width : 500px) {
+    .container{
+        max-width: 300px;
+    }
+    .content-ticket .head span > svg{
+        width: 10rem;
+    }
+    .content-ticket .head p{
+        font-size:.75rem;
+        color: var(--labelColor);
+        padding-left: 2rem;
+    
+    }
+    .content-ticket .foot img{
+        height: 2rem;
+        border-radius: .5rem;
+    }
+    .content-ticket .foot div span{
+        font-size: .75rem;
+    }
+    .content-ticket {
+    position: relative;
+    top: 2.5px;
+    height: 126px;
+    padding: 0;
+    }
+    .content-ticket .right {
+        right: -35px;
+    }
+    .content-ticket .foot div p {
+        font-size: small;
+    }
+    .content-ticket .foot div p{
+        display: flex;
+        align-items: center;
+        padding: 0 4px 4px ;
+    }
+    .content-ticket .foot div p svg {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right:6px;
+    }
+}
+.content-ticket::before{
+    content: '';
+}
+/* Start form */
+.container form {
+    font-size: 16px;
+    display: flex;
+flex-flow: column wrap;
+
+
+}
+.container form label{
+text-align: start;
+}
+.container form input{
+    
+    border:1px  solid hsla(227, 69%, 81%, 0.809);
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #fff;
+
+}
+.container form input:focus{
+        outline-offset: 2px;
+        outline: 1px  hsla(227, 69%, 81%, 0.809) ;
+        outline-style: outset;
+}
+.container form input[type="file"]{
+    text-align: center;
+    padding: 3rem;
+    border: 2px dashed hsla(227, 69%, 81%, 0.809);
+}
+
+.container form input.active{
+    background-color: var(--secondColor);
+    color: #000;
+}
