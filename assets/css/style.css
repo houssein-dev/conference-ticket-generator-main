@@ -235,7 +235,7 @@ text-align: start;
 }
 .container form input[type="file"]{
     text-align: center;
-    padding: 3rem;
+    padding: 2rem 0;
     border: 2px dashed hsla(227, 69%, 81%, 0.809);
 }
 
